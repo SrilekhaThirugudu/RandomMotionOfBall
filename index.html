@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      .ball{
+      background:red;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 30px;
+        left: 25px;
+        transition: 0.1s;
+}
+.ball1{
+      background:tomato;
+        width: 20px;
+        height:20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 450px;
+        left: 2px;
+        transition: 0.1s;
+}
+.ball2{
+      background:springgreen;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 400px;
+        left: 2px;
+        transition: 0.1s;
+}
+.ball3{
+      background: peru;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 350px;
+        left: 2px;
+        transition: 0.1s;
+}
+.ball4{
+      background:purple;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 300px;
+        left: 2px;
+        transition: 0.1s;
+}
+.ball5{
+      background:brown;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 50px;
+        left: 2px;
+        transition: 0.1s;
+}
+.ball6{
+      background:black;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 100px;
+        left: 2px;
+        transition: 0.1s;
+}
+.ball7{
+      background:blue;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 150px;
+        left: 2px;
+        transition: 0.1s;
+}
+.ball8{
+      background:yellow;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 200px;
+        left: 2px;
+        transition: 0.1s;
+}
+.ball9{
+      background:green;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 250px;
+        left: 2px;
+        transition: 0.1s;
+}
+body{
+    overflow: hidden;
+    position: relative;
+    background: violet
+}
+
+      body{
+    overflow: hidden;
+    position: relative;
+    background: violet
+}
+    </style>
+    <script>
+    function animateBall() {
+    const ball = document.getElementById("ball1");
+    var top = Math.floor((Math.random() * window.innerHeight) - 30);
+    var left = Math.floor((Math.random() * window.innerWidth) - 30);
+    var id = setInterval(moveBall, 20);
+    function moveBall() {
+        if(top < 200 && left < 200) {
+            top = top + parseInt(Math.random()*2);
+            left = left + parseInt(Math.random()*2);
+            ball.style.right = top + "px";
+          ball.style.left = left + "px";
+        } 
+        else {
+            clearInterval(id);
+        }
+    }
+}</script>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  </head>
+  <body>
+    <button onClick="animateBall()">Animate Ball</button>
+  <div class="ball" id="ball1"></div>
+<div class="ball1" id="ball1"></div>
+<div class="ball2" id="ball1"></div>
+<div class="ball3" id="ball1"></div>
+<div class="ball4" id="ball1"></div>
+<div class="ball5" id="ball1"></div>
+<div class="ball6" id="ball1"></div>
+<div class="ball7" id="ball1"></div>
+<div class="ball8" id="ball1"></div>
+<div class="ball9" id="ball1"></div>
+  </body>
+</html>
